@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "two"
+license = "MIT"
+licenselink = "https://github.com/jesse-michael-han/hugo-theme-two/blob/master/LICENSE.md"
+description = "An even more elegant, mobile-ready, minimalistic theme."
+homepage = "https://github.com/resugary/hugo-theme-two/"
+tags = ["blog","minimal","responsive","clean","google analytics","syntax highlighting"]
+features = ["blog","minimal","responsive","clean","google analytics","syntax highlighting"]
+min_version = "0.31"
+
+[author]
+  name = "jesse-michael-han"
+  homepage = "jesse-michael-han.github.io"
+
+# If porting an existing theme
+[original]
+  name = "Zack Scholl"
+  homepage = "https://schollz.github.io/"
+  repo = "https://github.com/schollz/onetwothree"
