@@ -1,9 +1,23 @@
+/* * { */
+/*    border: 1px solid red !important; */
+/* } */
+
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 /* reset */
 
 * {
 	margin: 0;
 	padding: 0;
+}
+
+.my-nav-bar{
+    /* background:#fff; */
+    float:right;
+}
+
+.my-mobile-nav-bar{
+    /* background:#fff; */
+    
 }
 
 html {
@@ -14,6 +28,7 @@ html {
 }
 
 body {
+    font-size: 16px;
     text-align: justify;
 	font-family: 'Merriweather', Helvetica, Arial, sans-serif;
 	padding: 0rem;
@@ -25,9 +40,9 @@ body {
 }
 
 header {
-	display: block;
-	padding: 2.3rem 0;
-	border-bottom: 0.13em solid #eee;
+    display: block;
+	padding: 2.3rem 0rem 0rem 0rem;
+	border-bottom: 0.15em solid #eee;
 }
 
 @media all {
@@ -59,8 +74,8 @@ header {
 }
 
 @media all and (max-width:580px) {
-	body>* {
-		margin: .7rem 1.5rem 0 1.5rem;
+    body>* {
+	margin: .7rem 1.5rem 0 1.5rem;
 	}
 }
 
@@ -72,27 +87,42 @@ h6 {
 	line-height: 1.35;
 	margin-top: .6em;
 	margin-bottom: .6em;
+	font-weight: bold;
 }
 
 h1 {
-	font-size: 1.4em;
+    font-size: 1.4em;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 h2 {
-	font-size: 1.3em;
+    font-size: 1.3em;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 h3 {
-	font-size: 1.1em;
+    font-size: 1.1em;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 h4 {
-	font-size: 1.0em;
+    font-size: 1.0em;
+    font-family: Arial;
+    font-weight: bold;
 }
 
-h5,
+h5{ front-size : 0.9em
+    font-family: Arial;
+    font-weight: bold;
+  }
+    
 h6 {
-	font-size: 0.9em;
+    font-size: 0.8em;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 div.content {
@@ -102,7 +132,7 @@ div.content {
 
 @media all and (max-width:520px) {
 	div.content {
-		padding: 0;
+		padding: 0.1rem;
 	}
 }
 

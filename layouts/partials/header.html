@@ -21,19 +21,44 @@
 	<meta name="og:type" content="article">
 	<!-- Open Graph - Article -->
 	<meta name="article:tag" content="{{ range .Params.tags }}{{.}} {{end}}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/style{{ $.Site.Params.style }}.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<!-- Google Analytics -->
 	{{ template "_internal/google_analytics_async.html" . }}
 </head>
 
 <body>
 
-<header>
-	<!-- Homepage Title -->
-	<a href="{{ .Site.BaseURL }}" style="font-size: 28px; float: left;color:#B30B1B;">{{ $.Site.Title }}</a>
-	<!-- Navigation Pages -->
-	{{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}{{end}}{{ with $.Site.GetPage "page" . }}<a href="{{ lower .Permalink }}" style="float: right; color:#777;">{{ title .Title }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </a>{{ end }}{{ end }}
+  <header>
+    <div class="hidden-xs">
+  <!-- Homepage Title -->
 
-	<!-- <\!-- Show RSS feed in the header -\-> -->
-	<!-- <a href="{{ .Site.BaseURL }}posts/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a> -->
-</header>
+<a href="{{ .Site.BaseURL }}" style="font-size:180%;color:#B30B1B; margin-right:20px;">{{ $.Site.Title }}</a>
+<!-- Navigation Pages -->
+	<div class="my-nav-bar">
+	{{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}{{end}}{{ with $.Site.GetPage "page" . }}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ lower .Permalink }}" style="color:#777; font-size:20px; font-family:Arial; font-weight:bold;">{{ title .Title }}</a>{{ end }}{{ end }}</div>
+
+	<!-- <\!-- show RSS feed in the header -\-> -->
+	  <!-- <a href="{{ .Site.BaseURL }}posts/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a> -->
+    </div>
+
+        <div class="visible-xs-block">
+  <!-- Homepage Title -->
+
+  
+<div align="center"><a href="{{ .Site.BaseURL }}" style="font-size:180%;color:#B30B1B">{{ $.Site.Title }}</a></div>
+<!-- Navigation Pages -->
+
+<div> </br> </div>
+
+	<div class="my-mobile-nav-bar" align="center">
+	{{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}{{end}}{{ with $.Site.GetPage "page" . }}&nbsp;&nbsp;&nbsp;<a href="{{ lower .Permalink }}" style="color:#777; font-size:20px; font-family:Arial; font-weight:bold;">{{ title .Title }}</a>&nbsp;&nbsp;&nbsp;{{ end }}{{ end }}</div>
+
+	<!-- <\!-- show RSS feed in the header -\-> -->
+	  <!-- <a href="{{ .Site.BaseURL }}posts/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a> -->
+</div>
+    </header>
+
+  
