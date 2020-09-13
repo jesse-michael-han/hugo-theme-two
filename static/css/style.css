@@ -3,6 +3,7 @@
 /* } */
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap'); */
 /* reset */
 
 * {
@@ -30,7 +31,7 @@ html {
 body {
     font-size: 16px;
     text-align: justify;
-	font-family: 'Merriweather', Helvetica, Arial, sans-serif;
+	font-family: "Merriweather", Helvetica, Arial, serif;
 	padding: 0rem;
 	margin: 0 auto;
 	width: 100%;
@@ -88,12 +89,15 @@ h6 {
 	margin-top: .6em;
 	margin-bottom: .6em;
 	font-weight: bold;
+        font-family: Arial;
 }
 
 h1 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-family: Arial;
     font-weight: bold;
+    margin-top: .6em;
+    margin-bottom: .6em;
 }
 
 h2 {
@@ -222,6 +226,10 @@ a:link {
 a:visited {
     color: #B30B1B;
 }
+
+/* strong { */
+/*     color: #B30B1B; */
+/* } */
 
 a {
 	color: #000;
